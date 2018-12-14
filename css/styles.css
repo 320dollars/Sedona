@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #f2f2f2;
+  font-family: "PTSans", sans-serif ;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/*header*/
+
+.navigation {
+  background-color: #fff;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  list-style: none;
+  line-height: 26px;
+}
+
+.navigation li:nth-child(3){
+  padding-left: 380px;
+}
+
+/*info*/
