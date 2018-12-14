@@ -1,24 +1,29 @@
 body {
-  margin: 0;
-  padding: 0;
-
   background-color: #f2f2f2;
   font-family: "PTSans", sans-serif ;
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }
 
-/*header*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+/*header+*/
 
 .navigation {
   background-color: #fff;
 }
 
 .logo {
+  left: 45.5%;
   position: absolute;
   top: 0;
-  left: 45%;
 }
 
 .navigation ul {
@@ -26,21 +31,58 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
+  margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin: 0;
 }
 
 .navigation a {
-  text-decoration: none;
   color: #000;
   font-weight: bold;
-  list-style: none;
   line-height: 26px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #81b3d2;
+}
+
+.navigation a:active {
+  color: rgba(178, 178, 178, 0.3);
 }
 
 .navigation li:nth-child(3){
-  padding-left: 380px;
+  padding-left: 300px;
 }
 
 /*info*/
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 715px;
+  background: url(backgrounds/background-index.jpg) no-repeat bottom;
+}
+
+.title-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.welcome {
+  margin-top: 75px;
+}
+
+.gorgeous {
+  margin-top: 10px;
+}
+
+.sedona {
+  margin-top: 50px;
+}
+
+.because {
+  margin-top: 55px;
+}
