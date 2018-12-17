@@ -14,7 +14,7 @@ body {
   width: 1200px;
 }
 
-/*header+*/
+/*header*/
 
 .navigation {
   background-color: #fff;
@@ -24,6 +24,7 @@ body {
   left: 45.5%;
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 .navigation ul {
@@ -56,14 +57,37 @@ body {
   padding-left: 300px;
 }
 
-/*info*/
+/*info+*/
 
 .info {
+  align-items: center;
+  background: url(backgrounds/white.png) no-repeat 100% 100%,
+  url(backgrounds/Shape.png) no-repeat 50% 68%,
+  url(backgrounds/background-index.jpg) no-repeat bottom;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 715px;
-  background: url(backgrounds/background-index.jpg) no-repeat bottom;
+  position: relative;
+}
+
+.info::after {
+  background-color: #766357;
+  content: "";
+  height: 2px;
+  left: 470px;
+  position: absolute;
+  top: 142px;
+  width: 30px;
+}
+
+.info::before {
+  background-color: #766357;
+  content: "";
+  height: 2px;
+  left: 695px;
+  position: absolute;
+  top: 142px;
+  width: 30px;
 }
 
 .title-hidden {
@@ -85,4 +109,87 @@ body {
 
 .because {
   margin-top: 55px;
+}
+
+.promo-sentence {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-top: 130px;
+  margin-left: 340px;
+  margin-right: 340px;
+  text-align: center;
+}
+
+.causes-title {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 26px;
+  margin-top: 30px;
+}
+
+/*content*/
+
+.content {
+  background: #fff url(backgrounds/back2.png) no-repeat 100% 0;
+}
+
+.cause {
+  display: flex;
+  flex-direction: column;
+  background-color: #81b3d2;
+  color: #fff;
+  width: 400px;
+}
+
+.cause-title-main {
+  padding-top: 22px;
+  margin-left: 130px;
+  margin-right: 130px;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.number {
+  position: relative;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.number::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #bcd6e7;
+  top: 10px;
+  left: 175px;
+}
+
+.number::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #bcd6e7;
+  top: 10px;
+  left: 215px;
+}
+
+.cause-text {
+  text-align: center;
+  padding-bottom: 23px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.cause-title {
+  font-size: 21px;
+  text-align: center;
+}
+
+.seconds-causes {
+  display: flex;
 }
