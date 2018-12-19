@@ -359,10 +359,74 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 .promo {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.social-medias {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  list-style: none;
+  margin-left: -30px;
+}
+
+.social-medias a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 9px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #81b3d2;
+  color: transparent;
+}
+
+.twitter {
+  background: #81b3d2 url(backgrounds/t.svg) no-repeat center center;
+}
+
+.facebook {
+  background: #81b3d2 url(backgrounds/fb-icon.svg) no-repeat center center;
+}
+
+.youtube {
+  background: #81b3d2 url(backgrounds/youtube.svg) no-repeat center center;
+}
+
+.social-medias a:hover {
+  background-color: #669ec0;
+}
+
+.social-medias a:active {
+  opacity: .3;
+  background-color: #5496bd;
+}
+
+.academy {
+  display: block;
+  vertical-align: middle;
+  min-width: 115px;
+  height: 45px;
+  background: url(backgrounds/logo_name.svg) no-repeat 100% 50%;
+}
+
+.invite {
+  position: absolute;
+  left: 870px;
+}
+
+/*search*/
+
+.search {
+  width: 575px;
+  height: 395px;
+  background: #fff;
 }
