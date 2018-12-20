@@ -128,7 +128,7 @@ body {
   margin-top: 30px;
 }
 
-/*content+*/
+/*content*/
 
 .content {
   background: #fff url(backgrounds/back2.png) no-repeat 100% 0;
@@ -313,13 +313,13 @@ body {
   margin-bottom: 60px;
 }
 
-/*conection*/
+/*conection+*/
 
 .conection {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .conection-title {
@@ -327,20 +327,20 @@ body {
 }
 
 .conection-text {
-  text-align: center;
   margin: 20px 375px 40px 375px;
+  text-align: center;
 }
 
 .conection button {
-  width: 575px;
-  height: 85px;
   background: #766357;
   border: none;
   color: #fff;
-  text-transform: uppercase;
   font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
+  height: 85px;
+  line-height: 26px;
+  text-transform: uppercase;
+  width: 575px;
 }
 
 .conection button:hover {
@@ -393,12 +393,24 @@ body {
   background: #81b3d2 url(backgrounds/t.svg) no-repeat center center;
 }
 
+.twitter:active {
+  background: url(backgrounds/t-active.svg) no-repeat center center;
+}
+
 .facebook {
   background: #81b3d2 url(backgrounds/fb-icon.svg) no-repeat center center;
 }
 
+.facebook:active {
+  background: url(backgrounds/fb-icon-active.svg) no-repeat center center;
+}
+
 .youtube {
   background: #81b3d2 url(backgrounds/youtube.svg) no-repeat center center;
+}
+
+.youtube:active {
+  background: url(backgrounds/youtube-active.svg) no-repeat center center;
 }
 
 .social-medias a:hover {
@@ -406,9 +418,10 @@ body {
 }
 
 .social-medias a:active {
-  opacity: .3;
   background-color: #5496bd;
 }
+
+
 
 .academy {
   display: block;
@@ -416,6 +429,14 @@ body {
   min-width: 115px;
   height: 45px;
   background: url(backgrounds/logo_name.svg) no-repeat 100% 50%;
+}
+
+.academy:hover {
+  background: url(backgrounds/logo-hover.svg) no-repeat 100% 50%;
+}
+
+.academy:active {
+  background: url(backgrounds/logo-active.svg) no-repeat 100% 50%;
 }
 
 .invite {
@@ -429,4 +450,36 @@ body {
   width: 575px;
   height: 395px;
   background: #fff;
+  font-weight: bold;
+}
+
+.search form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search input {
+  background: #f2f2f2;
+  border: none;
+}
+
+.date-inp {
+  width: 345px;
+  height: 35px;
+}
+
+.number-inp {
+  width: 115px;
+  height: 35px;
+}
+
+.search-btn {
+  width: 460px;
+  height: 60px;
+  background: #81b3d2;
+  border: none;
+  font-size: 21px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
 }
