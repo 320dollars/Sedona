@@ -455,7 +455,9 @@ body {
 
 .search form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+
 }
 
 .search input {
@@ -463,14 +465,31 @@ body {
   border: none;
 }
 
+.search label {
+  margin-left: 55px;
+}
+
 .date-inp {
+  display: inline;
   width: 345px;
   height: 35px;
+  margin-right: 55px;
+  margin-top: 30px;
+  
+}
+
+.men {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .number-inp {
   width: 115px;
   height: 35px;
+  margin-top: 30px;
+
 }
 
 .search-btn {
@@ -482,4 +501,5 @@ body {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 55px;
 }
