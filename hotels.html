@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Седона</title>
   </head>
   <body>
+    <div class="container">
     <header>
-      <nav>
-        <img src="images/Логотип.png" alt="logo" width="135" height="70">
+      <nav class="navigation">
+        <img class="logo" src="images/Логотип.png" alt="logo" width="135" height="70">
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видио</a></li>
           <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="#" class="active">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <h1>Hotels</h1>
-        <form class="" action="index.html" method="post">
-          <fieldset>
+      <section class="filter-hotels">
+        <h1 class="title-hidden">Hotels</h1>
+        <form class="filter" action="index.html" method="post">
+          <fieldset class="infastructure">
             <legend>Инфраструктура:</legend>
             <input type="checkbox" name="" value="">
             <label for="">Бассейн</label>
@@ -29,7 +33,7 @@
             <input type="checkbox" name="" value="">
             <label for="">Wi-fi</label>
           </fieldset>
-          <fieldset>
+          <fieldset class="type-appartaments">
             <legend>Тип жилья:</legend>
             <input type="checkbox" name="" value="">
             <label for="">Гостиница</label>
@@ -47,17 +51,17 @@
           <button type="button" name="button">Показать</button>
         </form>
       </section>
-      <section>
-        <h2>Найдено:3</h2>
-        <h3>Сортировка:</h3>
-        <ul>
-          <li><a href="#">По цене</a></li>
+      <section class="sorting">
+        <h2 class="sorting-amount">Найдено:3</h2>
+        <h3 class="title-sort">Сортировка:</h3>
+        <ul class="type-sort">
+          <li><a href="#" class="active-page">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтингу</a></li>
         </ul>
-        <ul>
-          <li><a href="#">Next</a></li>
-          <li><a href="#">Previous</a></li>
+        <ul class="next-previous-icons">
+          <li><a href="#" class="next">Next</a></li>
+          <li><a href="#" class="previous">Down</a></li>
         </ul>
       </section>
       <section>
@@ -90,14 +94,15 @@
         </div>
       </section>
     </main>
-    <footer>
-      <span>#visitSEDONA</span>
-      <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">YouTube</a></li>
+    <footer class="footer">
+      <span class="promo">#visitSEDONA</span>
+      <ul class="social-medias">
+        <li><a href="#" class="twitter">Twitter</a></li>
+        <li><a href="#" class="facebook">Facebook</a></li>
+        <li><a href="#" class="youtube">YouTube</a></li>
       </ul>
-      <span>WEBSITE by</span>
+      <a class="academy" href="#"></a>
+      <span class="invite">WEBSITE by</span>
     </footer>
   </body>
 </html>

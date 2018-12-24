@@ -26,7 +26,7 @@
         <img class="welcome" src="images/Welcome.png" alt="Welcome" width="190" height="45">
         <img class="gorgeous" src="images/gorgeous.png" alt="gorgeous" width="175" height="30">
         <img class="sedona" src="images/Sedona.png" alt="Sedona" width="460" height="80">
-        <img class="because" src="images/Because.png" alt="Because"width="295" height="80">
+        <img class="because" src="images/Because.png" alt="Because" width="295" height="80">
         <b class="promo-sentence">Седона — небольшой городок в аризоне, заслуживающий большего!</b>
         <h2 class="causes-title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
       </section>
@@ -78,8 +78,22 @@
       <section class="conection">
         <h2 class="conection-title">Заинтересовались?</h2>
         <p class="conection-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button" name="button">Поиск гостиницы в седоне</button>
-        <img src="images/map.jpg" alt="map" width="1200" height="475">
+        <button class="btn" type="button" name="button">Поиск гостиницы в седоне</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.135657587736!2d-111.83015800329127!3d34.85444381552606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1545668602737" width="1200" height="475" style="border:0" allowfullscreen></iframe>
+      </section>
+      <section class="search">
+        <h2 class="title-hidden">Поиск</h2>
+        <form class="info-list" action="index.html" method="post">
+          <label for="checkin">Дата заезда:</label>
+          <input class="date-inp begin" id="checkin" type="text" name="checkin-date">
+          <label for="checkout">Дата выезда:</label>
+          <input class="date-inp" type="text" id="checkout" name="checkout-date">
+          <label for="adolts">Взрослые:</label>
+          <input class="number-inp first" type="number" id="adolts" name="adolts-amount" value="2">
+          <label for="children">Дети:</label>
+          <input class="number-inp" type="number" id="children" name="children-amount" value="1">
+          <button class="search-btn" type="submit" name="button">Найти</button>
+        </form>
       </section>
     </main>
     <footer class="footer">
@@ -92,20 +106,7 @@
       <a class="academy" href="#"></a>
       <span class="invite">WEBSITE by</span>
     </footer>
-    <section class="search">
-      <h2 class="title-hidden">Поиск</h2>
-      <form class="" action="index.html" method="post">
-        <label for="">Дата заезда:</label>
-        <input class="date-inp" type="date" name="" value="">
-        <label for="">Дата выезда:</label>
-        <input class="date-inp" type="date" name="" value="">
-          <label for="">Взрослые:</label>
-          <input class="number-inp" type="number" name="" value="">
-          <label for="">Дети:</label>
-          <input class="number-inp" type="number" name="" value="">
-        <button class="search-btn" type="submit" name="button">Найти</button>
-      </form>
-    </section>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
