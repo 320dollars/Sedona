@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -362,7 +363,7 @@ main {
 }
 
 
-/*footer+*/
+/*footer*/
 
 .footer {
   align-items: center;
@@ -452,17 +453,17 @@ main {
   position: absolute;
 }
 
-/*search*/
+/*search+*/
 
 .search {
-  width: 575px;
   background: #fff;
+  bottom: 83px;
+  display: none;
   font-weight: bold;
+  left: 312px;
   padding-top: 50px;
   position: absolute;
-  bottom: 83px;
-  left: 312px;
-  display: none;
+  width: 575px;
 }
 
 .search-show {
@@ -470,9 +471,9 @@ main {
 }
 
 .search .info-list {
+  align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
   justify-content: flex-end;
   margin-left: 55px;
   margin-right: 55px;
@@ -481,10 +482,10 @@ main {
 .search input {
   background: #f2f2f2;
   border: none;
-  margin-left: 15px;
   display: inline;
-  line-height: 26px;
   font-weight: bold;
+  line-height: 26px;
+  margin-left: 15px;
   text-transform: uppercase;
 }
 
@@ -499,12 +500,12 @@ main {
 }
 
 .date-inp {
-  width: 302px;
+  background: url(backgrounds/calendar.svg) no-repeat;
   height: 35px;
   margin-top: 30px;
   padding-left: 15px;
   padding-right: 20px;
-  background: url(backgrounds/calendar.svg) no-repeat;
+  width: 302px;
 }
 
 .first {
@@ -512,24 +513,24 @@ main {
 }
 
 .number-inp {
-  width: 113px;
+  margin-left: 40px;
   height: 35px;
   margin-top: 30px;
-  margin-left: 40px;
   text-align: center;
+  width: 113px;
 }
 
 .search-btn {
-  width: 460px;
-  height: 60px;
   background: #81b3d2;
   border: none;
-  font-size: 21px;
   color: #fff;
+  font-size: 21px;
   font-weight: bold;
-  text-transform: uppercase;
+  height: 60px;
   margin-top: 55px;
   margin-bottom: 55px;
+  text-transform: uppercase;
+  width: 460px;
 }
 
 .search-btn:hover {
@@ -588,11 +589,15 @@ main {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .sorting-amount {
   line-height: 26px;
   margin-left: 70px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .title-sort {
@@ -633,7 +638,7 @@ main {
 .next-previous-icons {
   position: absolute;
   right: 50px;
-  top: 10px;
+  top: 20px;
   display: flex;
   list-style: none;
   font-size: 7px;
@@ -666,4 +671,63 @@ main {
 
 .previous:active {
   background: url(backgrounds/icon-down-dir.svg) no-repeat right;
+}
+
+/*annoncments*/
+
+.annoncments {
+  background: #fff;
+}
+
+.annoncment {
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+}
+
+.annoncment-content {
+  margin-left: 30px;
+}
+
+.annoncments a {
+  text-decoration: none;
+}
+
+.annoncment-title {
+  line-height: 26px;
+  color: #000;
+}
+
+.annoncment-info:first-of-type {
+  margin-right: 40px;
+}
+
+.annoncment .bt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-info {
+  width: 110px;
+  height: 25px;
+  background: #81b3d2;
+  color: #fff;
+  font-weight: bold;
+}
+
+.dis-btn {
+  width: 140px;
+  height: 25px;
+  background: #766357;
+  color: #fff;
+  font-weight: bold;
+}
+
+.raiting {
+  color: #8b8b8b;
+  background: #f2f2f2;
+  width: 110px;
+  height: 25px;
 }
