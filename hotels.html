@@ -11,7 +11,7 @@
     <div class="container">
     <header>
       <nav class="navigation">
-        <img class="logo" src="images/Логотип.png" alt="logo" width="135" height="70">
+        <a href="index.html"><img class="logo" src="images/Логотип.png" alt="logo" width="135" height="70"></a>
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видио</a></li>
@@ -26,30 +26,30 @@
         <form class="filter" action="index.html" method="post">
           <fieldset class="infastructure">
             <legend>Инфраструктура:</legend>
-            <input type="checkbox" name="" value="">
-            <label for="">Бассейн</label>
-            <input type="checkbox" name="" value="">
-            <label for="">Парковка</label>
-            <input type="checkbox" name="" value="">
-            <label for="">Wi-fi</label>
+            <input type="checkbox" id="pool" name="pool" value="pool" checked>
+            <label for="pool">Бассейн</label>
+            <input type="checkbox" id="parking" name="parking" value="parking">
+            <label for="parking">Парковка</label>
+            <input type="checkbox" id="wifi" name="wifi" value="wifi">
+            <label for="wifi">Wi-fi</label>
           </fieldset>
           <fieldset class="type-appartaments">
             <legend>Тип жилья:</legend>
-            <input type="checkbox" name="" value="">
-            <label for="">Гостиница</label>
-            <input type="checkbox" name="" value="">
-            <label for="">Мотель</label>
-            <input type="checkbox" id="appartaments" name="appartaments" value="appartaments" hidden>
+            <input type="checkbox" id="hotel" name="hotel" value="hotel" checked>
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" id="motel" name="motel" value="motel" checked>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" id="appartaments" name="appartaments" value="appartaments" checked>
             <label for="appartaments">Апартаменты</label>
           </fieldset>
           <fieldset class="cost">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="results">
-              <output name="result first-res">От 0</output>
-              <output name="result second-res">До 3000</output>
+              <output name="result">От 0</output>
+              <output name="result">До 3000</output>
             </div>
-            <input class="one-part" type="range" name="" value="">
-            <input class="two-part" type="range" name="" value="">
+            <input class="one-part" type="range" step="1" name="min-result" value="0">
+            <input class="two-part" type="range" step="1" name="max-result" value="70">
           </fieldset>
           <button class="filter-btn" type="button" name="button">Показать</button>
         </form>
@@ -122,5 +122,6 @@
       <a class="academy" href="#"></a>
       <span class="invite">WEBSITE by</span>
     </footer>
+   </div>
   </body>
 </html>
