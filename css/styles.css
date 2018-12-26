@@ -559,11 +559,14 @@ main {
 }
 
 .filter {
-  display: flex;
+
 }
 
 .filter-hotels fieldset {
   border: none;
+  display: flex;
+  width: 315px;
+  justify-content: center;
 }
 
 .filter-hotels legend {
@@ -573,13 +576,75 @@ main {
 }
 
 .infastructure input {
-  display: inline;
+
 }
 
-.infastructure, .type-appartaments {
+.infastructure,
+.type-appartaments {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.filter-hotels label {
+  margin-left: 40px;
+}
+
+.filter-hotels label::before {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+.cost {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cost input[type="range"] {
+  width: 150px;
+}
+
+.results {
+  width: 303px;
+  height: 33px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+}
+
+.first-res {
+  border-right: 1px solid #fff;
+}
+
+.second-res {
+  border-left: 1px solid #fff;
+}
+
+.two-part {
+  position: relative;
+  top: -21px;
+  left: 149px;
+}
+
+.filter-btn {
+  width: 135px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 3px;
 }
 
 /*sorting*/
@@ -779,4 +844,30 @@ main {
   display: flex;
   align-items: baseline;
   margin-bottom: -3px;
+}
+
+.stars {
+  position: absolute;
+  top: center;
+  left: center;
+  background: url(backgrounds/star.svg) ;
+  left: 87%;
+  top: 25%;
+}
+
+.four-str {
+  width: 75px;
+  height: 17px;
+}
+
+.three-str {
+  width: 55px;
+  height: 17px;
+  left: 88%;
+}
+
+.two-str {
+  width: 35px;
+  height: 17px;
+  left: 89%;
 }

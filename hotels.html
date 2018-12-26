@@ -39,16 +39,19 @@
             <label for="">Гостиница</label>
             <input type="checkbox" name="" value="">
             <label for="">Мотель</label>
-            <input type="checkbox" name="" value="">
-            <label for="">Апартаменты</label>
+            <input type="checkbox" id="appartaments" name="appartaments" value="appartaments" hidden>
+            <label for="appartaments">Апартаменты</label>
           </fieldset>
-          <fieldset>
+          <fieldset class="cost">
             <legend>Стоимость в сутки (Р):</legend>
-            <output name="result"></output>
-            <output name="result"></output>
-            <input type="range" name="" value="">
+            <div class="results">
+              <output name="result first-res">От 0</output>
+              <output name="result second-res">До 3000</output>
+            </div>
+            <input class="one-part" type="range" name="" value="">
+            <input class="two-part" type="range" name="" value="">
           </fieldset>
-          <button type="button" name="button">Показать</button>
+          <button class="filter-btn" type="button" name="button">Показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -75,6 +78,7 @@
               <a href="#" class="more-info bt">Подробнее</a>
               <a href="#" class="dis-btn bt">Забронировать</a>
               <span class="raiting bt">Рейтинг: 8,5</span>
+              <div class="stars four-str"></div>
             </div>
           </div>
         </div>
@@ -88,6 +92,7 @@
               <a href="#" class="more-info bt">Подробнее</a>
               <a href="#" class="dis-btn bt">Забронировать</a>
               <span class="raiting bt">Рейтинг: 8,9</span>
+              <div class="stars three-str"></div>
             </div>
           </div>
         </div>
@@ -101,6 +106,7 @@
               <a href="#" class="more-info bt">Подробнее</a>
               <a href="#" class="dis-btn bt">Забронировать</a>
               <span class="raiting bt">Рейтинг: 9,2</span>
+              <div class="stars two-str"></div>
             </div>
           </div>
         </div>
