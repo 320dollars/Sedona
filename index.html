@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-min.css">
     <meta charset="utf-8">
     <title>Седона</title>
   </head>
@@ -91,12 +91,14 @@
           <label for="adolts">Взрослые:</label>
           <input class="number-inp first" type="text" id="adolts" name="adolts-amount" value="2">
           <label for="children">Дети:</label>
-          <input class="number-inp" type="text" id="children" name="children-amount" value="1">
+          <input class="number-inp second" type="text" id="children" name="children-amount" value="1">
           <button class="search-btn" type="submit" name="button">Найти</button>
-          <a href="#" class="first-plus"><img src="images/plus.png"></a>
-          <a href="#" class="second-plus"><img src="images/plus.png"></a>
-          <a href="#" class="first-minus"><img src="images/minus.png"></a>
-          <a href="#" class="second-minus"><img src="images/minus.png"></a>
+          <a href="#" class="plus first-plus">+</a>
+          <a href="#" class="plus second-plus">+</a>
+          <a href="#" class="minus first-minus">-</a>
+          <a href="#" class="minus second-minus">-</a>
+          <a href="#" class="calendar">c</a>
+          <a href="#" class="calendar second-calendar">c</a>
         </form>
       </section>
     </main>
