@@ -45,11 +45,11 @@
           <fieldset class="cost">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="results">
-              <output name="result">От 0</output>
-              <output name="result">До 3000</output>
+              <output id="one-result" name="result" value="70">70</output>
+              <output id="two-result" name="result" value= "1700"></output>
             </div>
-            <input class="one-part" type="range" step="1" name="min-result" value="0">
-            <input class="two-part" type="range" step="1" name="max-result" value="70">
+            <input class="one-part" id="min-result" type="range" min="1" step="10" max="1500" name="min-result" value="20">
+            <input class="two-part" id="max-result" type="range" min="1501" step="10" max="3000" name="min-result" value="1700">
           </fieldset>
           <button class="filter-btn" type="button" name="button">Показать</button>
         </form>
@@ -123,5 +123,6 @@
       <span class="invite">WEBSITE by</span>
     </footer>
    </div>
+   <script src="js/scripts.js"></script>
   </body>
 </html>

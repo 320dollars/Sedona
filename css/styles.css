@@ -454,6 +454,26 @@ main {
 }
 
 /*search+*/
+/*#calendar {
+  position: absolute;
+}
+
+#calendar table {
+  border-collapse: collapse;
+}
+
+#calendar td,
+#calendar th {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+}
+
+#calendar th {
+  font-weight: bold;
+  background-color: #e6e6e6;
+}*/
+
 
 .search {
   background: #fff;
@@ -484,6 +504,7 @@ main {
   border: none;
   display: inline;
   font-weight: bold;
+  color: #000;
   line-height: 26px;
   margin-left: 15px;
   text-transform: uppercase;
@@ -496,7 +517,7 @@ main {
 .search input:focus {
   background: #fff;
   border: 2px solid #e5e5e5;
-  outline: none;
+  outline: transparent;
 }
 
 .date-inp {

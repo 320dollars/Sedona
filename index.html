@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles-min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Седона</title>
   </head>
@@ -85,9 +85,10 @@
         <h2 class="title-hidden">Поиск</h2>
         <form class="info-list" action="index.html" method="post">
           <label for="checkin">Дата заезда:</label>
-          <input class="date-inp begin" id="checkin" type="text" name="checkin-date" value="24 апреля 2017">
+          <input class="date-inp begin" id="checkin" type="text" name="checkin-date">
+          <div id="calendar"></div>
           <label for="checkout">Дата выезда:</label>
-          <input class="date-inp" type="text" id="checkout" name="checkout-date" value="4 июля 2017">
+          <input class="date-inp" type="text" id="checkout" name="checkout-date">
           <label for="adolts">Взрослые:</label>
           <input class="number-inp first" type="text" id="adolts" name="adolts-amount" value="2">
           <label for="children">Дети:</label>
@@ -112,7 +113,7 @@
       <a class="academy" href="#"></a>
       <span class="invite">WEBSITE by</span>
     </footer>
-    </div>
-    <script src="js/scripts.js"></script>
+  </div>
+  <script src="js/scripts.js"></script>
   </body>
 </html>
