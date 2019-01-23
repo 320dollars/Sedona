@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles-min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Седона</title>
   </head>
@@ -86,6 +86,14 @@
         <form class="info-list" action="index.html" method="post">
           <label for="checkin">Дата заезда:</label>
           <input class="date-inp begin" id="checkin" type="text" name="checkin-date">
+          <div id="calendar">
+              <table id="calendar2">
+                <thead>
+                  <tr><td>‹<td colspan="5"><td>›
+                  <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                <tbody>
+              </table>
+          </div>
           <label for="checkout">Дата выезда:</label>
           <input class="date-inp" type="text" id="checkout" name="checkout-date">
           <label for="adolts">Взрослые:</label>

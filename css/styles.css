@@ -52,8 +52,10 @@ body {
   text-decoration: none;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
   color: #81b3d2;
+  outline: transparent;
 }
 
 .navigation a:active {
@@ -245,6 +247,7 @@ main {
 
 .content-part-two {
   background: #fff url(backgrounds/back3.png) no-repeat 0 0;
+  background-size: auto 283px;
 }
 
 .two {
@@ -384,8 +387,10 @@ main {
   width: 575px;
 }
 
-.conection button:hover {
+.conection button:hover,
+.conection button:focus {
   background: #604e43;
+  outline-color: transparent;
 }
 
 .conection button:active {
@@ -468,8 +473,10 @@ main {
   background: url(backgrounds/youtube-active.svg) no-repeat center center;
 }
 
-.social-medias a:hover {
+.social-medias a:hover,
+.social-medias a:focus {
   background-color: #669ec0;
+  outline-color: transparent;
 }
 
 .social-medias a:active {
@@ -484,8 +491,10 @@ main {
   vertical-align: middle;
 }
 
-.academy:hover {
+.academy:hover,
+.academy:focus {
   background: url(backgrounds/logo-hover.svg) no-repeat 100% 50%;
+  outline-color: transparent;
 }
 
 .academy:active {
@@ -585,8 +594,10 @@ main {
   width: 460px;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.search-btn:focus {
   background: #669ec0;
+  outline-color: transparent;
 }
 
 .search-btn:active {
@@ -623,8 +634,11 @@ main {
 }
 
 .plus:hover,
-.minus:hover {
+.plus:focus,
+.minus:hover,
+.minus:focus {
   color: #000;
+  outline-color: transparent;
 }
 
 .plus:active,
@@ -671,8 +685,10 @@ main {
   top: 125px;
 }
 
-.calendar:hover {
+.calendar:hover,
+.calendar:focus {
   background: url(backgrounds/calendar.png) no-repeat;
+  outline-color: transparent;
 }
 
 .calendar:active {
@@ -719,6 +735,46 @@ main {
   to {
     background: #fff;
   }
+}
+
+/*calendar*/
+#calendar {
+  position: absolute;
+}
+
+#calendar2 {
+  font-size: 15px;
+  line-height: 1.2em;
+  text-align: center;
+  width: 100%;
+}
+
+#calendar2 thead tr:last-child {
+  color: rgb(85, 85, 85);
+  font-size: small;
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+
+#calendar2 tbody td:nth-child(n+6),
+#calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+
+#calendar2 tbody td.today {
+  background: rgb(220, 0 , 0);
+  color: #fff;
 }
 
 /*hotels*/

@@ -18,6 +18,7 @@ var oneOut = document.querySelector('#one-result');
 var checkIn = form.querySelector('#checkin');
 var checkOut = form.querySelector('#checkout');
 
+/*Открытие и закрытие модального окна*/
 openSearchBtn.addEventListener('click', function () {
   modalWindowSearch.classList.toggle('search-show');
   inputForFocus.focus();
@@ -31,6 +32,7 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
+/*Счетчик людей*/
 var getNewValue = function (object , button , operation) {
   button.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -50,6 +52,7 @@ var deleteClass = function() {
   numberChildren.classList.remove('no-valid');
 }
 
+/*Текущая дата*/
 var months = [
   'Января',
   'Февраля',
@@ -85,6 +88,7 @@ var getFormatDate = function (time) {
 checkIn.value = getFormatDate(today);
 checkOut.value = getFormatDate(tomorrow);
 
+/*Валидация формы*/
 form.addEventListener('submit', function (evt) {
   if (numberAdolts.value <= 0) {
     evt.preventDefault();
@@ -96,55 +100,17 @@ form.addEventListener('submit', function (evt) {
     numberChildren.classList.add('no-valid');
     setTimeout(deleteClass, 3500);
   }
-  if (checkIn.value.valueOf() < startDay.valueOf()) {
+  if (checkIn.value.valueOf() > startDay.valueOf()) {
     evt.preventDefault();
     checkIn.classList.add('no-valid');
     setTimeout(deleteClass, 3500);
   }
 });
 
+/*Календарь*/
 
-
-
-
-
-/*var getDay = function (date) {
-  var day = date.getDay();
-  if (day == 0) day = 7;
-  return day - 1;
-}*/
-
-/*var createCalendar = function (id, year, month) {
-  var element = form.querySelector(id);
-  var mon = month - 1;
-  var d = new Date(year, mon);
-  var table = '<table><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr>';
-  for (var i = 0; i < getDay(d); i++) {
-    table += '<td></td>';
-  }
-
-  while (d.getMonth() == mon) {
-    table += '<td>' + d.getDate() + '</td>';
-
-    if (getDay(d) % 7 == 6) {
-      table += '<tr></tr>';
-    }
-
-    d.setDate(d.setDate() + 1);
-  }
-
-  if (getDay(d) != 0 ) {
-      for (var i = getDay(d); i < 7; i++) {
-      table += '<td></td>';
-    }
-  }
-
-  table += '</tr></table>';
-  element.innerHTML = table;
+var createCalendar = function(id, year, month) {
+  var dlast = new Date(year, month + 1).getDate();
+  var d = new Date(year, month, dlast);
+  var 
 }
-
-createCalendar('#calendar', 2019, 1);*/
-
-/*oneRange.addEventListener('oninput', function() {
-  oneRange.value = oneOut.value;
-})*/
