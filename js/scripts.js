@@ -17,12 +17,15 @@ var oneRange = document.querySelector('#min-result');
 var oneOut = document.querySelector('#one-result');
 var checkIn = form.querySelector('#checkin');
 var checkOut = form.querySelector('#checkout');
+var modalCalendar = form.querySelector('#calendar');
+var calendarBtn1 = form.querySelector('.calendar');
+var calendarBtn2 = form.querySelector('.second-calendar');
 
-/*Открытие и закрытие модального окна*/
+/*Открытие и закрытие модального окна search*/
 openSearchBtn.addEventListener('click', function () {
   modalWindowSearch.classList.toggle('search-show');
   inputForFocus.focus();
-});
+  });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === ESC_Button) {
@@ -31,6 +34,18 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
+
+/*и календаря*/
+calendarBtn1.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalCalendar.classList.toggle('calendar--show');
+  });
+
+calendarBtn2.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalCalendar.classList.toggle('calendar--show');
+  });
+
 
 /*Счетчик людей*/
 var getNewValue = function (object , button , operation) {
@@ -108,9 +123,43 @@ form.addEventListener('submit', function (evt) {
 });
 
 /*Календарь*/
-
-var createCalendar = function(id, year, month) {
-  var dlast = new Date(year, month + 1).getDate();
-  var d = new Date(year, month, dlast);
-  var 
+function Calendar2(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+}
+}
+Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
 }
