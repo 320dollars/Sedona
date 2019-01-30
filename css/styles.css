@@ -235,14 +235,17 @@ main {
 
 .appartaments {
   background: url(backgrounds/icon-1.svg) no-repeat center 60px;
+  width: 400px;
 }
 
 .food {
   background: url(backgrounds/icon-3.svg) no-repeat center 60px;
+  width: 400px;
 }
 
 .presents {
   background: url(backgrounds/icon-2.svg) no-repeat center 55px;
+  width: 400px;
 }
 
 .content-part-two {
@@ -268,11 +271,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 400px;
 }
 
 .another-cause .cause-title {
-  margin-left: 135px;
-  margin-right: 135px;
+  margin-left: 130px;
+  margin-right: 130px;
   margin-top: 50px;
 }
 
@@ -289,7 +293,7 @@ main {
   background: #979797;
   content: "";
   height: 2px;
-  left: 185px;
+  left: 175px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -299,7 +303,7 @@ main {
   background-color: #979797;
   content: "";
   height: 2px;
-  left: 230px;
+  left: 215px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -309,7 +313,7 @@ main {
   background: #979797;
   content: "";
   height: 2px;
-  left: 165px;
+  left: 175px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -319,7 +323,7 @@ main {
   background-color: #979797;
   content: "";
   height: 2px;
-  left: 210px;
+  left: 215px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -329,7 +333,7 @@ main {
   background: #979797;
   content: "";
   height: 2px;
-  left: 165px;
+  left: 175px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -339,7 +343,7 @@ main {
   background-color: #979797;
   content: "";
   height: 2px;
-  left: 210px;
+  left: 215px;
   position: absolute;
   top: 10px;
   width: 10px;
@@ -794,7 +798,6 @@ main {
 .filter-hotels {
   background: url(backgrounds/filter.jpg) top;
   color: #fff;
-  min-height: 220px;
 }
 
 .filter {
@@ -808,7 +811,7 @@ main {
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .infastructure,
@@ -824,7 +827,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   margin-left: 70px;
   margin-top: 30px;
   width: 140px;
@@ -835,7 +838,7 @@ main {
 }
 
 .filter-hotels input[type='checkbox'] {
-  margin: 20px 0px 0 7px;
+  margin: 20px 0 0 7px;
   opacity: 0;
   position: absolute;
   z-index: -1;
@@ -918,6 +921,18 @@ main {
   width: 25px;
 }
 
+.cost input[type="range"]::-ms-thumb {
+  background: url(backgrounds/filter-button.svg) no-repeat center center;
+  height: 25px;
+  -ms-appearance: none;
+  width: 25px;
+}
+
+.field__box {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
 .results {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -964,7 +979,7 @@ main {
   color: #fff;
   height: 35px;
   position: absolute;
-  right: 160px;
+  right: 170px;
   text-transform: uppercase;
   width: 135px;
 }

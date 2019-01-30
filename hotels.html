@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-min.css">
     <meta charset="utf-8">
     <title>Седона</title>
   </head>
@@ -26,21 +26,33 @@
         <form class="filter" action="index.html" method="post">
           <fieldset class="infastructure">
             <legend>Инфраструктура:</legend>
-            <input type="checkbox" id="pool" name="pool" value="pool" checked>
-            <label for="pool">Бассейн</label>
-            <input type="checkbox" id="parking" name="parking" value="parking">
-            <label for="parking">Парковка</label>
-            <input type="checkbox" id="wifi" name="wifi" value="wifi">
-            <label for="wifi">Wi-fi</label>
+            <div class="field__box">
+              <input type="checkbox" id="pool" name="pool" value="pool" checked>
+              <label for="pool">Бассейн</label>
+            </div>
+            <div class="field__box">
+              <input type="checkbox" id="parking" name="parking" value="parking">
+              <label for="parking">Парковка</label>
+            </div>
+            <div class="field__box">
+              <input type="checkbox" id="wifi" name="wifi" value="wifi">
+              <label for="wifi">Wi-fi</label>
+            </div>
           </fieldset>
           <fieldset class="type-appartaments">
             <legend>Тип жилья:</legend>
-            <input type="checkbox" id="hotel" name="hotel" value="hotel" checked>
-            <label for="hotel">Гостиница</label>
-            <input type="checkbox" id="motel" name="motel" value="motel" checked>
-            <label for="motel">Мотель</label>
-            <input type="checkbox" id="appartaments" name="appartaments" value="appartaments" checked>
-            <label for="appartaments">Апартаменты</label>
+            <div class="field__box">
+              <input class="type_check" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </div>
+            <div class="field__box">
+              <input type="checkbox" id="motel" name="motel" value="motel" checked>
+              <label for="motel">Мотель</label>
+            </div>
+            <div class="field__box">
+              <input type="checkbox" id="appartaments" name="appartaments" value="appartaments" checked>
+              <label for="appartaments">Апартаменты</label>
+            </div>
           </fieldset>
           <fieldset class="cost">
             <legend>Стоимость в сутки (Р):</legend>
@@ -50,7 +62,7 @@
             </div>
             <div class="range-box">
               <input id="min-result" type="range" min="1" step="10" max="1500" name="min-result" value="20">
-              <input id="max-result" type="range" min="1501" step="10" max="3000" name="min-result" value="1700">
+              <input id="max-result" type="range" min="1500" step="10" max="3000" name="min-result" value="1700">
             </div>
           </fieldset>
           <button class="filter-btn" type="button" name="button">Показать</button>
@@ -125,6 +137,6 @@
       <span class="invite">WEBSITE by</span>
     </footer>
    </div>
-   <script src="js/scripts-hotels.js"></script>
+   <script src="js/script-hotels.js"></script>
   </body>
 </html>
